@@ -8,7 +8,7 @@ const getGeoCodeFromStreetName = streetName => {
   const APPCODE = process.env['APPCODE']
 
   return request(`https://geocoder.api.here.com/6.2/geocode.json?app_id=${APPID}&app_code=${APPCODE}&searchtext=${streetName}&country=Canada&city=Vancouver`)
-        .then(res => JSON.parse(res))
+    .then(res => JSON.parse(res))
 }
 
 module.exports = {
